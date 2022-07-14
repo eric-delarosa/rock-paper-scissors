@@ -41,7 +41,31 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
-const playerSelection = prompt("Please select rock, paper, or scissors.");
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    let wins = 0;
+    let losses = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt(
+          "Please select rock, paper, or scissors."
+        );
+        const computerSelection = computerPlay();
+        const result = playRound(playerSelection, computerSelection)
+        console.log(result);
+        if(result.includes('Win')){
+            wins++;
+        }
+        if(result.includes('Lose')){
+            losses++;
+        }
+    }
+    if (wins > losses) {
+        console.log('Player wins the game!')
+    }
+    else if (losses > wins) {
+        console.log('Player loses the game!')
+    }
+    else if (wins === losses) {
+        console.log('Game ends in tie!')
+    }
+}
+game()
