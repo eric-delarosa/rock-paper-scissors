@@ -15,6 +15,8 @@ function computerPlay() {
     return choice;
 }
 
+
+
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     
@@ -40,23 +42,27 @@ function playRound(playerSelection, computerSelection) {
         return "You Win! Scissors beats Paper!"
     }
 }
+ 
+
+const buttons = document.querySelectorAll('button');
+
 
 function game(){
     let wins = 0;
     let losses = 0;
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt(
-          "Please select rock, paper, or scissors."
-        );
-        const computerSelection = computerPlay();
-        const result = playRound(playerSelection, computerSelection)
-        console.log(result);
-        if(result.includes('Win')){
-            wins++;
-        }
-        if(result.includes('Lose')){
-            losses++;
-        }
+    const computerSelection = computerPlay();
+    const playerSelection = buttons.addEventListener("click", function (e) {
+      console.log(target.className);
+    });
+    
+    if(result.includes('Win')){
+       wins++;
+       document.querySelector('.player-score', function(e){
+        
+       })
+    }
+    if(result.includes('Lose')){
+        losses++;
     }
     if (wins > losses) {
         console.log('Player wins the game!')
