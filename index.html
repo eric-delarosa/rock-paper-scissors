@@ -8,28 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock, Paper, Scissors</h1>
+    <h1>Melee, Magic, Ranged</h1>
     <div class="buttons">
-        <button class="rock"><img src="./assets/img/icons8-bow-and-arrow-64.png" alt="rock"></button>
-        <button class="paper"><img src="./assets/img/icons8-book-64.png" alt="paper"></button>
-        <button class="scissors"><img src="./assets/img/icons8-broad-sword-64.png" alt="scissors"></button>
+        <button class="rock"><img src="./assets/img/Attack_icon_(detail).png" alt="rock"></button>
+        <button class="paper"><img src="./assets/img/Magic_icon_(detail).png" alt="paper"></button>
+        <button class="scissors"><img src="./assets/img/Ranged_icon_(detail).png" alt="scissors"></button>
     </div>
-
-    <div class="scoreboard"> 
-        <div class="scores">
-            <h3>PLAYER</h3>
-            <p id="player-score">0</p>
+    <p class="rules">Magic beats Melee. Melee beats Ranged. Ranged beats Magic</p>
+    <div class="scroll-top"></div>
+    <div class="container">
+        <div class="scoreboard">
+        
+            <div class="scores">
+                <h3>PLAYER</h3>
+                <p id="player-score">0</p>
+            </div>
+            <div class="scores">
+                <h3>COMPUTER</h3>
+                <p id="cpu-score">0</p>
+            </div>
         </div>
-        <div class="scores">
-            <h3>COMPUTER</h3>
-            <p id="cpu-score">0</p>
+        <p id="round-result"></p>
+        
+        <div>
+            <h2 id="game-result"></h2>
         </div>
     </div>
-    <p id="round-result"></p>
-
-    <div>
-        <h2 id="game-result"></h2>
-    </div>
+    <div class="scroll-bottom"></div>
 </body>
 <script src="script.js"></script>
 </html>
